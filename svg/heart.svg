@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <symbol id="heart" fill="currentColor">
+    <path
+      d="M6 0H3v3h3V0Zm3 0H6v3h3V0ZM3 3H0v3h3V3Zm0 3H0v3h3V6Zm0 3H0v3h3V9Zm9-9H9v3h3V0ZM6 12H3v3h3v-3Zm3 3H6v3h3v-3Zm3 3H9v3h3v-3Zm9-18h3v3h-3V0Zm-3 0h3v3h-3V0Zm6 3h3v3h-3V3Zm0 3h3v3h-3V6Zm0 3h3v3h-3V9Zm-9-9h3v3h-3V0Zm6 12h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm0-15h-3v3h3V3Zm0 18h-3v3h3v-3Z" />
+  </symbol>
+</svg>
