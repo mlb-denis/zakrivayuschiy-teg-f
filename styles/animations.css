@@ -13,111 +13,111 @@
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
 @keyframes left-right {
-    from {
-      left: -22px;
-    }
-  
-    to {
-      left: -18px;
-    }
+  from {
+    left: -22px;
   }
-  
-  @keyframes left-right-underline {
-    from {
-      color: var(--accent-color);
-      opacity: 0.6;
-      width: 0;
-    }
-    to {
-      color: var(--accent-color);
-      opacity: 0.6;
-      width: 100%;
-    }
+
+  to {
+    left: -18px;
   }
-  
-  @keyframes change-opacity {
-    from {
-      opacity: 0;
-    }
-  
-    to {
-      opacity: 1;
-    }
+}
+
+@keyframes left-right-underline {
+  from {
+    color: var(--accent-color);
+    opacity: 0.6;
+    width: 0;
   }
-  
-  @keyframes change-scale {
-    from {
-      scale: 1;
-    }
-  
-    to {
-      scale: 1.1;
-    }
+  to {
+    color: var(--accent-color);
+    opacity: 0.6;
+    width: 100%;
   }
-  
-  .like-icon {
-    transform-origin: center;
-    cursor: pointer;
-  }
-  
-  .like-icon .sparks {
+}
+
+@keyframes change-opacity {
+  from {
     opacity: 0;
   }
-  
-  .like-icon .contour {
-    fill: currentColor;
-    transition: fill 0.1s linear;
+
+  to {
+    opacity: 1;
   }
-  
-  .like-icon .core {
-    fill: transparent;
-    transition: fill 0.3s 0.03s linear;
+}
+
+@keyframes change-scale {
+  from {
+    scale: 1;
   }
-  
-  .like-icon .main-body {
-    fill: transparent;
-    transition: fill 0.3s linear;
+
+  to {
+    scale: 1.1;
   }
-  
-  .like-icon:hover .core {
-    fill: currentColor;
-    transition: fill 0.3s linear;
-  }
-  
-  .like-icon:hover .main-body {
-    fill: currentColor;
-    transition: fill 0.3s 0.05s linear;
-  }
-  
-  .like-icon:active .core {
-    fill: red;
-    transition: fill 0.3s linear;
-  }
-  
-  .like-icon:active .main-body {
-    fill: red;
-    transition: fill 0.3s 0.05s linear;
-  }
-  
-  .like-icon.is-liked .contour {
-    fill: red;
-    transition: fill 0.3s 0.06s linear;
-  }
-  
-  .like-icon.is-liked .core {
-    fill: red;
-    transition: fill 0.3s linear;
-  }
-  
-  .like-icon.is-liked .main-body {
-    fill: red;
-    transition: fill 0.3s 0.05s linear;
-  }
-  
-  .like-icon.is-liked {
-    animation: change-scale 0.3s 0.1s ease-in 1 alternate;
-  }
-  
-  .like-icon.is-liked .sparks {
-    animation: change-opacity 0.3s 0.3s ease-in 1 alternate;
-  }
+}
+
+.like-icon {
+  transform-origin: center;
+  cursor: pointer;
+}
+
+.like-icon .sparks {
+  opacity: 0;
+}
+
+.like-icon .contour {
+  fill: currentColor;
+  transition: fill 0.1s linear;
+}
+
+.like-icon .core {
+  fill: transparent;
+  transition: fill 0.3s 0.03s linear;
+}
+
+.like-icon .main-body {
+  fill: transparent;
+  transition: fill 0.3s linear;
+}
+
+.like-icon:hover .core {
+  fill: currentColor;
+  transition: fill 0.3s linear;
+}
+
+.like-icon:hover .main-body {
+  fill: currentColor;
+  transition: fill 0.3s 0.05s linear;
+}
+
+.like-icon:active .core {
+  fill: red;
+  transition: fill 0.3s linear;
+}
+
+.like-icon:active .main-body {
+  fill: red;
+  transition: fill 0.3s 0.05s linear;
+}
+
+.like-icon.is-liked .contour {
+  fill: red;
+  transition: fill 0.3s 0.06s linear;
+}
+
+.like-icon.is-liked .core {
+  fill: red;
+  transition: fill 0.3s linear;
+}
+
+.like-icon.is-liked .main-body {
+  fill: red;
+  transition: fill 0.3s 0.05s linear;
+}
+
+.like-icon.is-liked {
+  animation: change-scale 0.3s 0.1s ease-in 1 alternate;
+}
+
+.like-icon.is-liked .sparks {
+  animation: change-opacity 0.3s 0.3s ease-in 1 alternate;
+}
