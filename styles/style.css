@@ -22,6 +22,7 @@
   min-block-size: 100dvb;
   inline-size: var(--page-section-size);
   margin: 0 auto;
+  font-variation-settings: "wght" var(--themes-font-weight-content);
 }
 
 .header {
@@ -82,6 +83,8 @@
 .theme-menu__item:has(.theme-menu__button:disabled)::before {
   content: "▶";
   position: absolute;
+  top: -2px;
+  left: 0px;
   opacity: 0.6;
   animation: left-right 0.5s ease-in-out infinite alternate;
 }
@@ -93,7 +96,6 @@
 .theme-menu__button:focus {
   outline: none;
   opacity: 0.6;
-  transition: 0.5s;
 }
 
 .theme-menu__button:focus-visible {
@@ -119,6 +121,7 @@
   font-size: 18px;
   font-weight: var(--font-weight-title);
   padding: 4px 10px 6px 10px;
+  font-variation-settings: "wght" var(--themes-font-weight-title);
 }
 
 .image__block {
@@ -218,6 +221,7 @@
   flex-direction: column;
   gap: 27px;
   padding: 25px;
+  font-variation-settings: "wght" var(--themes-font-weight-title);
 }
 
 .text {
@@ -238,15 +242,16 @@
   padding: 0;
   background: none;
   cursor: pointer;
+  transition: 0.3s ease;
 }
 
 .card__icon-button:focus {
   outline: none;
+  height: 36px;
 }
 
 .card__icon-button:focus-visible {
   outline: 2px solid currentColor;
-  transition: 0.3s ease;
 }
 
 .button {
@@ -255,6 +260,7 @@
   font-family: var(--custom-font), fantasy;
   background: none;
   cursor: pointer;
+  transition: 0.5s ease-in-out;
 }
 
 .card__like-button {
@@ -276,11 +282,10 @@
 
 .button:focus-visible {
   box-shadow: 2px 2px 0 0 var(--accent-color);
-  transition: 0.5s ease-in-out;
+  mix-blend-mode: difference;
 }
 
 .button::before {
-  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -290,14 +295,11 @@
 }
 
 .button:hover::before {
-  content: "";
   position: absolute;
   width: 100%;
-  background: var(--accent-color);
-  transition: 0.5s ease-in;
 }
 
-.footer {
+.main__footer {
   display: flex;
   justify-content: center;
   padding: 52px 32.5px 100px 32.5px;
@@ -410,7 +412,7 @@
   .footer-button {
     min-width: 340px;
     min-height: 40px;
-    margin-top: -5px;
+    margin-top: 0px;
     padding: 15px;
   }
 
