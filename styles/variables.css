@@ -1,9 +1,9 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-  --global-font: "Inter-Variable";
-  --custom-font: "PressStart2P-Regular";
-  --font-weight-title: 785;
-  --font-weight-text: 465;
+  --global-font: "Inter";
+  --custom-font: "PressStart2P";
+  --wght-text: 465;
+  --wght-title: 785;
   --accent-color: #00cc14;
   --card-background-color: #000;
   --text-stroke-color: #000;

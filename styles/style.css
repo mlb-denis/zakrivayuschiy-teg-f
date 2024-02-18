@@ -22,7 +22,7 @@
   min-block-size: 100dvb;
   inline-size: var(--page-section-size);
   margin: 0 auto;
-  font-variation-settings: "wght" var(--themes-font-weight-content);
+  font-variation-settings: "wght" var(--wght-text);
 }
 
 .header {
@@ -32,7 +32,7 @@
   align-items: center;
   color: var(--accent-color);
   border: 2px solid var(--accent-color);
-  font-family: var(--custom-font), fantasy;
+  font-family: var(--custom-font), serif;
   background-color: var(--card-background-color);
   min-block-size: 327px;
   margin-block-start: 100px;
@@ -83,8 +83,8 @@
 .theme-menu__item:has(.theme-menu__button:disabled)::before {
   content: "▶";
   position: absolute;
-  top: -2px;
-  left: 0px;
+  top: 0;
+  left: 0;
   opacity: 0.6;
   animation: left-right 0.5s ease-in-out infinite alternate;
 }
@@ -96,6 +96,7 @@
 .theme-menu__button:focus {
   outline: none;
   opacity: 0.6;
+  transition: 0.5s;
 }
 
 .theme-menu__button:focus-visible {
@@ -119,9 +120,9 @@
 .card__title {
   border-block-end: 2px solid var(--accent-color);
   font-size: 18px;
-  font-weight: var(--font-weight-title);
+  font-weight: var(--wght-title);
   padding: 4px 10px 6px 10px;
-  font-variation-settings: "wght" var(--themes-font-weight-title);
+  font-variation-settings: "wght" var(--wght-title);
 }
 
 .image__block {
@@ -150,10 +151,12 @@
   mix-blend-mode: hard-light;
 }
 
-@supports (-webkit-text-stroke: 1px var(--text-stroke-color)) {
+@supports (-webkit-text-stroke: 1px var(--text-stroke-color)) or
+  (text-stroke: 1px var(--text-stroke-color)) {
   .image__block:after {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--text-stroke-color);
+    text-stroke: 1px var(--text-stroke-color);
   }
 }
 
@@ -223,7 +226,7 @@
 }
 
 .text {
-  font-weight: var(--font-weight-text);
+  font-weight: var(--wght-text);
   font-size: 18px;
   line-height: 115%;
 }
@@ -240,7 +243,6 @@
   padding: 0;
   background: none;
   cursor: pointer;
-  transition: 0.3s ease;
 }
 
 .card__icon-button:focus {
@@ -250,12 +252,13 @@
 
 .card__icon-button:focus-visible {
   outline: 2px solid currentColor;
+  transition: 0.3s ease;
 }
 
 .button {
   position: relative;
   border: 2px solid var(--accent-color);
-  font-family: var(--custom-font), fantasy;
+  font-family: var(--custom-font), serif;
   background: none;
   cursor: pointer;
   transition: 0.5s ease-in-out;
@@ -281,9 +284,11 @@
 .button:focus-visible {
   box-shadow: 2px 2px 0 0 var(--accent-color);
   mix-blend-mode: difference;
+  transition: 0.5s ease-in-out;
 }
 
 .button::before {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -293,8 +298,11 @@
 }
 
 .button:hover::before {
+  content: "";
   position: absolute;
   width: 100%;
+  background: var(--accent-color);
+  transition: 0.5s ease-in;
 }
 
 .main__footer {
