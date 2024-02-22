@@ -460,32 +460,33 @@
           </div>
         </div>
       </article>
-
-      <div class="main__footer">
-        <button
-          class="button footer-button"
-          type="button"
-          onclick="window['dialog-id'].showModal();"
-          aria-controls="dialog-id"
-        >
-          <svg class="floppy-image" viewBox="0 0 40 40">
-            <use href="./svg/floppy.svg#floppy"></use>
-          </svg>
-
-          <span class="button__text">Сохранить на память</span>
-        </button>
-      </div>
     </main>
+    <div class="main__footer">
+      <button
+        class="button footer-button"
+        type="button"
+        onclick="window['dialog-id'].showModal();"
+        aria-controls="dialog-id"
+      >
+        <svg class="floppy-image" viewBox="0 0 40 40">
+          <use href="./svg/floppy.svg#floppy"></use>
+        </svg>
+        <span class="button__text">Сохранить на&nbsp;память</span>
+      </button>
+    </div>
     <dialog id="dialog-id" class="dialog">
       <div class="dialog__info">
         <svg class="floppy-image" viewBox="0 0 40 40">
-          <use href="./svg/floppy.svg"></use>
+          <use href="./svg/floppy.svg#floppy"></use>
         </svg>
-
         <p class="dialog__text">Вставьте дискету,&nbsp;чтобы продолжить</p>
       </div>
       <form method="dialog">
-        <button class="button dialog-button" type="submit">
+        <button
+          class="button dialog-button"
+          type="submit"
+          onclick="window['dialog-save'].close()"
+        >
           <span class="button__text">OK</span>
         </button>
       </form>

@@ -60,9 +60,10 @@
   line-height: normal;
   text-transform: uppercase;
   background: none;
-  transition: 0.5s;
+  transition: opacity ease 0.3s;
   padding: 0;
   cursor: pointer;
+  gap: 5px;
 }
 
 .theme-menu__list {
@@ -95,13 +96,15 @@
 
 .theme-menu__button:focus {
   outline: none;
-  opacity: 0.6;
-  transition: 0.5s;
 }
 
 .theme-menu__button:focus-visible {
+  opacity: 0.6;
+}
+
+.theme-menu__button:focus-visible::after {
   border-block-end: 2px solid currentColor;
-  animation: left-right-underline 0.5s linear;
+  scale: 1;
 }
 
 .main {
@@ -247,21 +250,20 @@
 
 .card__icon-button:focus {
   outline: none;
-  height: 36px;
 }
 
 .card__icon-button:focus-visible {
-  outline: 2px solid currentColor;
-  transition: 0.3s ease;
+  border: 2px solid currentColor;
 }
 
 .button {
   position: relative;
   border: 2px solid var(--accent-color);
+  justify-content: center;
   font-family: var(--custom-font), serif;
   background: none;
   cursor: pointer;
-  transition: 0.5s ease-in-out;
+  transition: box-shadow 0.3s ease;
 }
 
 .card__like-button {
@@ -283,8 +285,7 @@
 
 .button:focus-visible {
   box-shadow: 2px 2px 0 0 var(--accent-color);
-  mix-blend-mode: difference;
-  transition: 0.5s ease-in-out;
+  outline: none;
 }
 
 .button::before {
@@ -294,15 +295,15 @@
   left: 0;
   width: 0;
   height: 100%;
-  transition: 0.5s ease-in;
+  transition: transform 0.5s ease-in-out;
+  background: var(--accent-color);
+  transform: scaleX(0);
+  transform-origin: left;
 }
 
 .button:hover::before {
-  content: "";
-  position: absolute;
+  transform: scaleX(1);
   width: 100%;
-  background: var(--accent-color);
-  transition: 0.5s ease-in;
 }
 
 .main__footer {
@@ -319,7 +320,6 @@
   background-color: var(--card-background-color);
   min-inline-size: 306px;
   min-block-size: 51px;
-  padding: 15px 0;
   gap: 8px;
 }
 
@@ -351,7 +351,6 @@
 .dialog__info {
   display: grid;
   grid-template-columns: min-content 1fr;
-  max-block-size: 63px;
   align-items: center;
   gap: 20px;
 }
