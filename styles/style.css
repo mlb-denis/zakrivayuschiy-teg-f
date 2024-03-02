@@ -160,7 +160,6 @@
   font-weight: normal;
   text-shadow: 0 0 1px var(--text-stroke-color);
   mix-blend-mode: hard-light;
-  text-shadow: 0px 0px 5px black;
 }
 
 @supports (-webkit-text-stroke: 1px var(--text-stroke-color)) or
