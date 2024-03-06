@@ -158,17 +158,19 @@
   padding-inline-end: 25px;
   padding-block-start: 27px;
   color: var(--accent-color);
-  font-family: var(--custom-font), fantasy, sans-serif;
-  text-shadow: 0 0 1px var(--text-stroke-color); 
+  font-family: var(--custom-font), fantasy;
+  text-shadow: 1px var(--text-stroke-color);
   opacity: 0.5;
 }
 
-@supports ((-webkit-text-stroke: 1px var(--text-stroke-color)) or
-  (text-stroke: 1px var(--text-stroke-color))) {
+@supports (
+  (-webkit-text-stroke: 1px var(--text-stroke-color)) or
+    (text-stroke: 1px var(--text-stroke-color))
+) {
   .image__block:after {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--text-stroke-color);
-    text-stroke: 1px #FFF;
+    text-stroke: 1px #fff;
   }
 }
 
