@@ -71,7 +71,7 @@
   line-height: normal;
   text-transform: uppercase;
   background: none;
-  /* transition: opacity ease 0.3s; */
+  transition: opacity 1s;
   padding: 0;
   cursor: pointer;
   gap: 5px;
@@ -109,7 +109,7 @@
   width: 0;
   margin-top: 2px;
   background-color: var(--accent-color);
-  transition: width 0.5s ease-in-out;
+  transition: width 300ms, background-color 1s;
 }
 .theme-menu__button:hover::after {
   width: 100%;
@@ -150,24 +150,26 @@
 
 .image__block:after {
   position: absolute;
+  font-size: 14px;
+  mix-blend-mode: hard-light;
+  /* right: 40px;
+  top: 25px; */
   inset-inline-end: 0;
   padding-inline-end: 25px;
   padding-block-start: 27px;
-  opacity: 0.5;
   color: var(--accent-color);
-  font-family: var(--custom-font), fantasy;
-  font-size: 14px;
-  font-weight: normal;
-  text-shadow: 0 0 1px var(--text-stroke-color);
-  mix-blend-mode: hard-light;
+  font-family: var(--custom-font), fantasy, sans-serif;
+  text-shadow: 0 0 1px var(--text-stroke-color); 
+  opacity: 0.5;
+  
 }
 
-@supports (-webkit-text-stroke: 1px var(--text-stroke-color)) or
-  (text-stroke: 1px var(--text-stroke-color)) {
+@supports ((-webkit-text-stroke: 1px var(--text-stroke-color)) or
+  (text-stroke: 1px var(--text-stroke-color))) {
   .image__block:after {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--text-stroke-color);
-    text-stroke: 1px var(--text-stroke-color);
+    text-stroke: 1px #FFF;
   }
 }
 
@@ -252,6 +254,7 @@
 
 .card__icon-button {
   display: flex;
+  align-items: center;
   height: 36px;
   border: none;
   padding: 0;
@@ -285,9 +288,10 @@
 .button .button__text {
   position: relative;
   color: var(--button-text-color);
-  letter-spacing: -1px;
   mix-blend-mode: difference;
+  font-size: 14px;
   z-index: 1;
+  cursor: pointer;
 }
 
 .button:focus {
