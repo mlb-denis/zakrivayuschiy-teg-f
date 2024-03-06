@@ -161,7 +161,6 @@
   font-family: var(--custom-font), fantasy, sans-serif;
   text-shadow: 0 0 1px var(--text-stroke-color); 
   opacity: 0.5;
-  
 }
 
 @supports ((-webkit-text-stroke: 1px var(--text-stroke-color)) or
