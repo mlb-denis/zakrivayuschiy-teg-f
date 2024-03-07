@@ -36,15 +36,16 @@
   font-family: var(--custom-font), serif;
   background-color: var(--card-background-color);
   min-block-size: 327px;
-  margin-block-start: 100px;
-  padding-block-end: 25px;
+  margin-block-start: 102px;
+  margin-block-end: 100p;
+  padding-block-start: 136px;
+  padding-block-end: 20px;
   gap: 20px;
 }
 
 .header__logo {
   font-size: var(--logo-font-size);
   text-transform: uppercase;
-  margin-top: 120px;
 }
 
 .header__title {
@@ -57,7 +58,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 10px;
+  gap: 12px;
   padding: 4px 0 0 21px;
 }
 
@@ -71,7 +72,7 @@
   line-height: normal;
   text-transform: uppercase;
   background: none;
-  transition: opacity 1s;
+  transition: 0.3s ease;
   padding: 0;
   cursor: pointer;
   gap: 5px;
@@ -81,6 +82,11 @@
 
 .theme-menu__item .theme-menu__button:hover {
   opacity: 0.6;
+}
+
+.theme-menu__button:enabled {
+  transition: 0.3s ease;
+  opacity: 1;
 }
 
 .theme-menu__item:has(.theme-menu__button:disabled) {
@@ -105,11 +111,16 @@
 .theme-menu__button::after {
   content: "";
   display: block;
-  height: 2px;
-  width: 0;
-  margin-top: 2px;
   background-color: var(--accent-color);
-  transition: width 300ms, background-color 1s;
+  block-size: 2px;
+  inline-size: 100%;
+  transform-origin: left;
+  transition: scale 0.3s;
+  scale: 0;
+  /* height: 2px;
+  width: 0;
+  margin-top: 2px; */
+  /* transition: width 300ms, background-color 1s; */
 }
 .theme-menu__button:hover::after {
   width: 100%;
@@ -118,7 +129,7 @@
   display: flex;
   flex-direction: column;
   gap: 50px;
-  padding-block-start: 99px;
+  padding-block-start: 100px;
 }
 
 .card {
@@ -271,16 +282,6 @@
   border: 2px solid currentColor;
 }
 
-.button {
-  position: relative;
-  border: 2px solid var(--accent-color);
-  justify-content: center;
-  font-family: var(--custom-font), serif;
-  background: none;
-  cursor: pointer;
-  transition: box-shadow 0.3s ease;
-}
-
 .card__like-button {
   width: 128px;
   height: 35px;
@@ -295,31 +296,39 @@
   cursor: pointer;
 }
 
-.button:focus {
-  outline: none;
-}
-
-.button:focus-visible {
-  box-shadow: 2px 2px 0 0 var(--accent-color);
-  outline: none;
+.button {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  font-family: var(--custom-font, fantasy);
+  border: solid 2px var(--accent-color, #000);
+  transition: 0.5s ease-in;
+  background-color:var(--card-background-color);
+  cursor: pointer;
 }
 
 .button::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  transition: 0.5s ease-in;
+  block-size: 100%;
+  inline-size: 100%;
+  inset: 0;
+  background-color: var(--accent-color, #000);
+  transition: 0.5s ease-in-out;
+  transform: translateX(-100%);
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  transition: 0.3s ease-in;
+  box-shadow: 2px 2px 0px var(--accent-color, #000);
 }
 
 .button:hover::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  background: var(--accent-color);
-  transition: 0.5s ease-in;
+  transform: translateX(0);
 }
 
 .main__footer {
@@ -424,10 +433,6 @@
 @media (376px <= width <= 1440px) {
   .header {
     min-block-size: 364px;
-  }
-
-  .header__logo {
-    margin-top: 134px;
   }
 
   .footer-button {
