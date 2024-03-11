@@ -45,7 +45,6 @@
   font-size: var(--logo-font-size);
   text-transform: uppercase;
   margin-block-start: clamp(120px, 9.444vw, 136px);
- 
 }
 
 .header__title {
@@ -62,7 +61,7 @@
   display: flex;
   flex-direction: column;
   gap: 14px;
-  padding: 4px 0 0 21px; 
+  padding: 4px 0 0 21px;
 }
 
 .theme-menu__button {
@@ -108,7 +107,6 @@
   left: 0;
   opacity: 0.6;
   animation: left-right 0.5s ease-in-out infinite alternate;
-  
 }
 
 .theme-menu__button::after {
@@ -308,7 +306,7 @@
   font-family: var(--custom-font, fantasy);
   border: solid 2px var(--accent-color, #000);
   transition: 0.5s ease-in;
-  background-color:var(--card-background-color);
+  background-color: var(--card-background-color);
   cursor: pointer;
 }
 
