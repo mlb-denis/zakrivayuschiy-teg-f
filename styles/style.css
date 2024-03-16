@@ -348,8 +348,7 @@
 
 .footer-button .floppy-image {
   block-size: 22px;
-  inline-size: 22px
-  fill var(--button-text-color);
+  inline-size: 22px fill var(--button-text-color);
   mix-blend-mode: difference;
 }
 
@@ -412,13 +411,15 @@
   .page {
     width: 100%;
   }
-  .image__block:after{
+
+  .image__block:after {
     right: 11px;
   }
+
   .footer-button {
     flex-direction: column;
     width: 306px;
-    white-space: nowrap
+    white-space: nowrap;
   }
 
   .footer-button .floppy-image {
