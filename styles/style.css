@@ -170,8 +170,8 @@
   font-size: 14px;
   mix-blend-mode: hard-light;
   inset-inline-end: 0;
-  padding-inline-end: 25px;
-  padding-block-start: 27px;
+  right: 25px;
+  padding-block-start: 25px;
   color: var(--accent-color);
   font-family: var(--custom-font), fantasy;
   text-shadow: 1px var(--text-stroke-color);
@@ -334,12 +334,6 @@
   transform: translateX(0);
 }
 
-.main__footer {
-  display: flex;
-  justify-content: center;
-  padding: 52px 32.5px 100px 32.5px;
-}
-
 .footer-button {
   display: flex;
   flex-direction: row;
@@ -349,11 +343,13 @@
   padding: 15px 20px;
   margin-inline: auto;
   margin-block-end: 105px;
+  gap: 10px;
 }
 
 .footer-button .floppy-image {
-  width: 21px;
-  fill: var(--button-text-color);
+  block-size: 22px;
+  inline-size: 22px
+  fill var(--button-text-color);
   mix-blend-mode: difference;
 }
 
@@ -416,10 +412,13 @@
   .page {
     width: 100%;
   }
-
+  .image__block:after{
+    right: 11px;
+  }
   .footer-button {
     flex-direction: column;
     width: 306px;
+    white-space: nowrap
   }
 
   .footer-button .floppy-image {
@@ -438,9 +437,9 @@
   }
 
   .footer-button {
-    min-width: 342px;
+    min-width: 340px;
     min-height: 40px;
-    margin-top: -5px;
+    margin-top: -2px;
     padding: 15px;
   }
 
