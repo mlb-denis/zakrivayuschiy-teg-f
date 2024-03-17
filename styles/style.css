@@ -347,8 +347,9 @@
 }
 
 .footer-button .floppy-image {
-  block-size: 22px;
-  inline-size: 22px fill var(--button-text-color);
+  block-size: 21px;
+  inline-size: 21px;
+  fill: var(--button-text-color);
   mix-blend-mode: difference;
 }
 
@@ -423,8 +424,8 @@
   }
 
   .footer-button .floppy-image {
-    width: 28px;
-    height: 28px;
+    block-size: 21px;
+    inline-size: 21px;
   }
 
   .dialog[open] {
@@ -445,8 +446,8 @@
   }
 
   .floppy-image {
-    width: 21px;
-    height: 21px;
+    block-size: 21px;
+    inline-size: 21px;
   }
 
   .footer-button .button__text {
