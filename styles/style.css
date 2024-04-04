@@ -347,10 +347,10 @@
 }
 
 .footer-button .floppy-image {
-  block-size: 21px;
-  inline-size: 21px;
   fill: var(--button-text-color);
   mix-blend-mode: difference;
+  position: relative;
+  z-index: 1;
 }
 
 .footer-button span {
@@ -380,8 +380,8 @@
 }
 
 .dialog .floppy-image {
-  width: 39px;
-  height: 39px;
+  width: 40px;
+  height: 40px;
   fill: currentColor;
 }
 
@@ -424,8 +424,8 @@
   }
 
   .footer-button .floppy-image {
-    block-size: 21px;
-    inline-size: 21px;
+    width: 28px;
+    height: 28px;
   }
 
   .dialog[open] {
@@ -446,8 +446,8 @@
   }
 
   .floppy-image {
-    block-size: 21px;
-    inline-size: 21px;
+    width: 21px;
+    height: 21px;
   }
 
   .footer-button .button__text {
