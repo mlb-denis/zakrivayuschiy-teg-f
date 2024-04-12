@@ -347,10 +347,13 @@
 }
 
 .footer-button .floppy-image {
+  width: 21px;
+  height: 21px;
   fill: var(--button-text-color);
-  mix-blend-mode: difference;
   position: relative;
-  z-index: 1;
+  color: var(--button-text-color);
+  mix-blend-mode: difference;
+  
 }
 
 .footer-button span {
@@ -441,13 +444,14 @@
   .footer-button {
     min-width: 340px;
     min-height: 40px;
-    margin-top: -2px;
+    margin-top: 1px;
     padding: 15px;
   }
 
   .floppy-image {
     width: 21px;
     height: 21px;
+    color: currentColor;
   }
 
   .footer-button .button__text {
