@@ -349,7 +349,6 @@
 .footer-button .floppy-image {
   width: 21px;
   height: 21px;
-  fill: var(--button-text-color);
   position: relative;
   color: var(--button-text-color);
   mix-blend-mode: difference;
